@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="cCr-Cx-7vq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="B4l-vF-hA0">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="iRb-4q-Krf">
+            <objects>
+                <navigationController id="B4l-vF-hA0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pZU-4P-wrW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1xg-L5-5V4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pq-Op-dgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-402" y="391"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -21,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-0H-7V2" customClass="RatingView" customModule="StarryStars">
-                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Jlc-pL-qOG"/>
@@ -43,15 +60,24 @@
                                     </mask>
                                 </variation>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxc-ee-LYE">
+                                <rect key="frame" x="116" y="206" width="143" height="30"/>
+                                <state key="normal" title="ObjC View Controller"/>
+                                <connections>
+                                    <segue destination="cCr-Cx-7vq" kind="show" id="RmZ-EO-GH6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="i3z-0H-7V2" secondAttribute="trailing" id="GO5-h7-G7g"/>
                             <constraint firstItem="i3z-0H-7V2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IUf-cD-i6Q"/>
+                            <constraint firstItem="kxc-ee-LYE" firstAttribute="centerX" secondItem="i3z-0H-7V2" secondAttribute="centerX" id="Jjk-hd-T5N"/>
                             <constraint firstAttribute="trailing" secondItem="i3z-0H-7V2" secondAttribute="trailing" id="Q9d-i8-V4J"/>
                             <constraint firstItem="i3z-0H-7V2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dVf-3Z-kyC"/>
                             <constraint firstItem="i3z-0H-7V2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k9H-vm-Xbc"/>
                             <constraint firstItem="i3z-0H-7V2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qWV-2B-ayc"/>
+                            <constraint firstItem="kxc-ee-LYE" firstAttribute="top" secondItem="i3z-0H-7V2" secondAttribute="bottom" constant="42" id="xb1-Rq-YeI"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -60,6 +86,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="fDq-82-Epb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

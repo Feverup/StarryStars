@@ -7,7 +7,7 @@
 
 import UIKit
 
-@objc public protocol RatingViewDelegate {
+@objc public protocol RatingViewDelegate: class {
     /**
      Called when user's touch ends
      
@@ -21,7 +21,7 @@ import UIKit
  Rating bar, fully customisable from Interface builder
 */
 @IBDesignable
-open class RatingView: UIView {
+@objcMembers open class RatingView: UIView {
    
     /// Total number of stars
     @IBInspectable open var starCount: Int = 5
